@@ -1,5 +1,12 @@
+import { Container } from "../../components/Container/Container.styled";
+import Navbar from "../../components/Navbar/Navbar";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <Container>
+      <Navbar />
+    </Container>
+  );
 };
 
 export default Home;
