@@ -1,0 +1,12 @@
+@import "../../assets/styles/cssImports.scss";
+
+.header {
+  display: flex;
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid $gray-1;
+
+  &__logo {
+    padding: 38px 0;
+  }
+}
