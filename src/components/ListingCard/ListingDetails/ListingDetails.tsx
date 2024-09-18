@@ -5,13 +5,10 @@ interface ListingCardDetailProps {
   text: string;
 }
 
-const ListingDetails: React.FC<ListingCardDetailProps> = ({
-  text,
-  icon,
-}) => {
+const ListingDetails: React.FC<ListingCardDetailProps> = ({ text, icon }) => {
   return (
     <div className="listing-details">
-      <span className="listing-card-details__icon">{icon}</span>
+      <span className="listing-details__icon">{icon}</span>
       <span>{text}</span>
     </div>
   );
