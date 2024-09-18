@@ -1,6 +1,8 @@
-import Image from "../../assets/images/image.png";
 import { useNavigate } from "react-router-dom";
+import Image from "../../assets/images/image.png";
 import ListingDetails from "./ListingDetails/ListingDetails";
+import ImageItem from "../ImageItem/ImageItem";
+
 import { HiLocationMarker } from "react-icons/hi";
 import { IoBed } from "react-icons/io5";
 import { BiSolidArea } from "react-icons/bi";
@@ -18,8 +20,7 @@ const ListingCard = () => {
   return (
     <div className="listing-card" onClick={handleCardClick}>
       <div className="listing-card__image-container">
-        <img className="listing-card__image" src={Image} alt="image" />
-        <span className="listing-card__badge">ქირავდება</span>
+       <ImageItem image={Image} badge="ქირავდება" />
       </div>
 
       <div className="listing-card__info">

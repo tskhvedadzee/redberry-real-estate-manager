@@ -8,25 +8,6 @@
     position: relative;
     height: 307px;
   }
-  &__image {
-    width: 100%;
-    height: 307px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  &__badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    border-radius: 15px;
-    padding: 6px 7px;
-    background-color: $black-1;
-    color: $white;
-    font-size: 12px;
-    line-height: 14.4px;
-    text-align: center;
-  }
   &__info {
     border-radius: 0 0 14px 14px;
     border: 1px solid $gray-1;
