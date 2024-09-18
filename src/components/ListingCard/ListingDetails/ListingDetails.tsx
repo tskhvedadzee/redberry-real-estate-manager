@@ -5,7 +5,7 @@ interface ListingCardDetailProps {
   text: string;
 }
 
-const ListingCardDetails: React.FC<ListingCardDetailProps> = ({
+const ListingDetails: React.FC<ListingCardDetailProps> = ({
   text,
   icon,
 }) => {
@@ -17,4 +17,4 @@ const ListingCardDetails: React.FC<ListingCardDetailProps> = ({
   );
 };
 
-export default ListingCardDetails;
+export default ListingDetails;
