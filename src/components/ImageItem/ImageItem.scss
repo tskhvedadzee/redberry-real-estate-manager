@@ -1,0 +1,23 @@
+@import "../../assets/styles/cssImports.scss";
+
+.image-item {
+  position: relative;
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 15px;
+    padding: 6px 7px;
+    background-color: $black-1;
+    color: $white;
+    font-size: 12px;
+    line-height: 14.4px;
+    text-align: center;
+  }
+}
