@@ -1,6 +1,6 @@
 import Image from "../../assets/images/image.png";
 import { useNavigate } from "react-router-dom";
-import ListingCardDetails from "./ListingCardDetails/ListingCardDetails";
+import ListingDetails from "./ListingDetails/ListingDetails";
 import { HiLocationMarker } from "react-icons/hi";
 import { IoBed } from "react-icons/io5";
 import { BiSolidArea } from "react-icons/bi";
@@ -25,16 +25,16 @@ const ListingCard = () => {
       <div className="listing-card__info">
         <div className="listing-card__info--header">
           <h3>80 000</h3>
-          <ListingCardDetails
+          <ListingDetails
             icon={<HiLocationMarker />}
             text="თბილისი, ი. ჭავჭავაძის 53"
           />
         </div>
 
         <div className="listing-card__icons">
-          <ListingCardDetails icon={<IoBed />} text="53" />
-          <ListingCardDetails icon={<BiSolidArea />} text="53" />
-          <ListingCardDetails icon={<BsSignpostFill />} text="53" />
+          <ListingDetails icon={<IoBed />} text="53" />
+          <ListingDetails icon={<BiSolidArea />} text="53" />
+          <ListingDetails icon={<BsSignpostFill />} text="53" />
         </div>
       </div>
     </div>

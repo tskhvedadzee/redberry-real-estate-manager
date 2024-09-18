@@ -1,4 +1,4 @@
-import "./ListingCardDetails.scss";
+import "./ListingDetails.scss";
 
 interface ListingCardDetailProps {
   icon: any;
@@ -10,7 +10,7 @@ const ListingCardDetails: React.FC<ListingCardDetailProps> = ({
   icon,
 }) => {
   return (
-    <div className="listing-card-details">
+    <div className="listing-details">
       <span className="listing-card-details__icon">{icon}</span>
       <span>{text}</span>
     </div>
