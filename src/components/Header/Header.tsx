@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/LOGO-02 3.png";
-import { Container } from "../Container/Container";
+import { Container } from "../Container/Container.styled";
 
 import "./Header.scss";
 
