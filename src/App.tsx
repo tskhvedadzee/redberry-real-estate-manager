@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import ListingPage from "./pages/ListingPage/ListingPage";
 
 import "./App.css";
+import AddListing from "./pages/AddListing/AddListing";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/listing-page" element={<ListingPage />} />
+          <Route path="/add-listing" element={<AddListing />} />
         </Routes>
       </Router>
     </>
