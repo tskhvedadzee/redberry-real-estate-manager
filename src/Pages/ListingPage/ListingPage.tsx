@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
-
-import Image from "../../assets/images/listingImage.png";
-import { Container } from "../../components/Container/Container.styled";
-import ListingDetails from "../../components/ListingCard/ListingDetails/ListingDetails";
-import ImageItem from "../../components/ImageItem/ImageItem";
-import ListingAgent from "./ListingAgent/ListingAgent";
+import { useState } from "react";
 
 import { FaArrowLeft } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { BiSolidArea } from "react-icons/bi";
 import { IoBed } from "react-icons/io5";
 import { BsSignpostFill } from "react-icons/bs";
+
+import Image from "../../assets/images/listingImage.png";
+import { Container } from "../../components/Container/Container.styled";
+import ListingDetails from "../../components/ListingCard/ListingDetails/ListingDetails";
+import ImageItem from "../../components/ImageItem/ImageItem";
+import ListingAgent from "./ListingAgent/ListingAgent";
+import DeleteListingModal from "../../components/DeleteListingModal/DeleteListingModal";
 
 import "./ListingPage.scss";
 
@@ -19,6 +21,16 @@ const ListingPage = () => {
 
   const handleBackClick = () => {
     navigate(-1);
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDeleteClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -61,12 +73,14 @@ const ListingPage = () => {
                 <ListingAgent />
                 <button
                   className="listing-page__info--delete-listing"
-                  onClick={() => {
-                    console.log("delete listing clicked");
-                  }}
+                  onClick={handleDeleteClick}
                 >
                   ლისტინგის წაშლა
                 </button>
+                <DeleteListingModal
+                  isOpen={isModalOpen}
+                  onClose={handleCloseModal}
+                />
               </div>
             </div>
           </div>

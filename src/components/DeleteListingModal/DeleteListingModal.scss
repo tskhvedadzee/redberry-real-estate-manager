@@ -1,0 +1,49 @@
+@import "../../assets/styles/cssImports.scss";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: $white;
+  padding: 50px 100px;
+  border-radius: 20px;
+  text-align: center;
+
+  &__header {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+    color: $black-4;
+    font-weight: normal;
+  }
+  &__modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  &__close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    font-size: 20px;
+    color: $black-4;
+    background-color: $white;
+    cursor: pointer;
+  }
+}
