@@ -6,6 +6,7 @@ import AddAgentModal from "../AddAgentModal/AddAgentModal";
 import ActionButton from "../ActionButton/ActionButton";
 
 import "./Navbar.scss";
+import Dropdown from "../Dropdown/Dropdown";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -21,7 +22,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div>dropdown</div>
+      <div>
+        <Dropdown />
+      </div>
 
       <div className="navbar__buttons">
         <ActionButton
@@ -38,6 +41,7 @@ const Navbar = () => {
 
         <AddAgentModal isVisible={isModalVisible} onClick={handleAgentClick} />
       </div>
+      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import ImageUploading, { ImageListType } from "react-images-uploading";
-import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
 
 import "./UploadImage.scss";
 import { BsTrash3 } from "react-icons/bs";
@@ -16,7 +16,7 @@ export function UploadImage() {
     setImages(imageList as never[]);
   };
   const handleRemoveImage = (index: number, event: React.MouseEvent) => {
-    event.stopPropagation(); // Prevent click from bubbling up
+    event.stopPropagation(); 
     setImages((prevImages) => prevImages.filter((_, i) => i !== index));
   };
 

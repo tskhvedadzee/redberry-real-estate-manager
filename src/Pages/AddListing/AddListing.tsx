@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
+import ChooseAgent from "./ChooseAgent/ChooseAgent";
+import ListingDetails from "./ListingDetails/ListingDetails";
+import ListingLocation from "./ListingLocation/ListingLocation";
+import ActionButton from "../../components/ActionButton/ActionButton";
 import { Container } from "../../components/Container/Container.styled";
 import ListingRadioButtons from "./ListingRadioButtons/ListingRadioButtons";
-import ListingLocation from "./ListingLocation/ListingLocation";
-import ListingDetails from "./ListingDetails/ListingDetails";
-import ActionButton from "../../components/ActionButton/ActionButton";
-import ChooseAgent from "./ChooseAgent/ChooseAgent";
 
 import "./AddListing.scss";
 
@@ -15,13 +15,13 @@ const AddListing = () => {
   const handleBackClick = () => {
     navigate(-1);
   };
+
   return (
     <Container>
       <div className="add-listing">
         <h1>ლისტინგის დამატება</h1>
 
         <div className="add-listing__fields">
-
           <ListingRadioButtons />
           <ListingLocation />
           <ListingDetails />

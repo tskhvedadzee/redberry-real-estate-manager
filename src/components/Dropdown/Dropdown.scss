@@ -1,0 +1,9 @@
+@import "../../assets/styles/cssImports.scss";
+
+.dropdown-menu {
+  border: 1px solid $gray-1;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 6px;
+  gap: 24px;
+}

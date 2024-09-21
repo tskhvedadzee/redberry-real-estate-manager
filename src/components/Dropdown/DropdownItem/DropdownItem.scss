@@ -1,0 +1,50 @@
+@import "../../../assets/styles/cssImports.scss";
+
+.dropdown-item {
+  position: relative;
+  display: inline-block;
+  
+  &__button {
+    display: flex;
+    gap: 3px;
+    padding: 8px 14px;
+    background-color: $white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--active {
+      background-color: $gray-2;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    margin-top: 20px;
+    background-color: $white;
+    border: 1px solid $gray-1;
+    border-radius: 10px;
+    z-index: 1;
+
+    &--text {
+      font-size: 16px;
+      font-weight: bold;
+      
+    }
+    &--list {
+      list-style: none;
+    }
+    &--button {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 24px;
+    }
+  }
+}
