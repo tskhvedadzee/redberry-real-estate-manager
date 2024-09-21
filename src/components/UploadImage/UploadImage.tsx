@@ -2,9 +2,9 @@ import React from "react";
 import ImageUploading, { ImageListType } from "react-images-uploading";
 import { CiCirclePlus } from "react-icons/ci";
 
-import "./ListingImageUpload.scss";
+import "./UploadImage.scss";
 
-export function ListingImageUpload() {
+export function UploadImage() {
   const [images, setImages] = React.useState([]);
 
   const onChange = (

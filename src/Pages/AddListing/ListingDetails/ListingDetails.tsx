@@ -1,6 +1,6 @@
 import Input from "../../../components/Input/Input";
 import ListingDescription from "../ListingDescription/ListingDescription";
-import { ListingImageUpload } from "../ListingImageUpload/ListingImageUpload";
+import { UploadImage } from "../../../components/UploadImage/UploadImage";
 
 import "./ListingDetails.scss";
 
@@ -15,7 +15,7 @@ const ListingDetails = () => {
           <Input type="number" label="საძინებლების რაოდენობა*" />
         </div>
         <ListingDescription />
-        <ListingImageUpload />
+        <UploadImage />
       </div>
     </div>
   );
