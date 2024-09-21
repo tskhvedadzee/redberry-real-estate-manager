@@ -2,9 +2,9 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { PublicLayout } from "./layout/PublicLayout";
 
-import { Home } from "./pages/Home/Home";
-import { AddListing } from "./pages/AddListing/AddListing";
-import { ListingPage } from "./pages/ListingPage/ListingPage";
+import Home from "./pages/Home";
+import AddListing from "./pages/AddListing";
+import ListingPage from "./pages/ListingPage";
 
 import "./App.css";
 
