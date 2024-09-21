@@ -1,0 +1,38 @@
+@import "../../../assets/styles/cssImports.scss";
+
+.listing-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  &__label {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  &__textarea {
+    resize: none;
+    color: $gray-3;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid $gray-3;
+    height: 135px;
+
+    &--invalid {
+      border-color: $red;
+    }
+  }
+  &__validation-message {
+    color: $black-2;
+    font-size: 14px;
+    line-height: 16.8px;
+    display: flex;
+    justify-content: baseline;
+    gap: 7px;
+  }
+}
+
+textarea:focus {
+  outline: none;
+}
