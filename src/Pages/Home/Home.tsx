@@ -1,8 +1,8 @@
-import { Container } from "../../components/Container/Container.styled";
-import ListingCard from "../../components/ListingCard/ListingCard";
 import Navbar from "../../components/Navbar/Navbar";
+import ListingCard from "../../components/ListingCard/ListingCard";
+import { Container } from "../../components/Container/Container.styled";
 
-const Home = () => {
+export const Home = () => {
   return (
     <Container>
       <Navbar />
@@ -10,5 +10,3 @@ const Home = () => {
     </Container>
   );
 };
-
-export default Home;

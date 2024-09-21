@@ -1,23 +1,24 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import ListingPage from "./pages/ListingPage/ListingPage";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import { PublicLayout } from "./layout/PublicLayout";
+
+const Home = lazy(() => import("./pages/Home"));
+const ListingPage = lazy(() => import("./pages/ListingPage"));
+const AddListing = lazy(() => import("./pages/AddListing"));
 
 import "./App.css";
-import AddListing from "./pages/AddListing/AddListing";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
+    <Suspense>
+      <Routes>
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/listing-page" element={<ListingPage />} />
           <Route path="/add-listing" element={<AddListing />} />
-        </Routes>
-      </Router>
-    </>
+          <Route path="/listing-page" element={<ListingPage />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 
