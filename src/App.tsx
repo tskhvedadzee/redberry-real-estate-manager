@@ -2,8 +2,11 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { PublicLayout } from "./layout/PublicLayout";
 
+//@ts-ignore
 import Home from "./pages/Home";
+//@ts-ignore
 import AddListing from "./pages/AddListing";
+//@ts-ignore
 import ListingPage from "./pages/ListingPage";
 
 import "./App.css";
