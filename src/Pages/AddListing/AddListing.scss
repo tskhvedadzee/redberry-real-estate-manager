@@ -1,0 +1,35 @@
+@import "../../assets/styles/cssImports.scss";
+
+.add-listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 55px;
+  margin-bottom: 200px;
+
+  &__title {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+  &__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 55px;
+  }
+  &__buttons {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    gap: 32px;
+  }
+}
