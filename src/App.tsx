@@ -1,10 +1,10 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { PublicLayout } from "./layout/PublicLayout";
 
-const Home = lazy(() => import("./pages/Home"));
-const ListingPage = lazy(() => import("./pages/ListingPage"));
-const AddListing = lazy(() => import("./pages/AddListing"));
+import { Home } from "./pages/Home/Home";
+import { AddListing } from "./pages/AddListing/AddListing";
+import { ListingPage } from "./pages/ListingPage/ListingPage";
 
 import "./App.css";
 
