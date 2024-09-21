@@ -16,7 +16,7 @@ import DeleteListingModal from "../../components/DeleteListingModal/DeleteListin
 
 import "./ListingPage.scss";
 
-export const ListingPage = () => {
+const ListingPage = () => {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
@@ -89,3 +89,5 @@ export const ListingPage = () => {
     </Container>
   );
 };
+
+export default ListingPage;

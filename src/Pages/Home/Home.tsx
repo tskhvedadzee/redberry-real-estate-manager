@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import ListingCard from "../../components/ListingCard/ListingCard";
 import { Container } from "../../components/Container/Container.styled";
 
-export const Home = () => {
+const Home = () => {
   return (
     <Container>
       <Navbar />
@@ -10,3 +10,5 @@ export const Home = () => {
     </Container>
   );
 };
+
+export default Home;

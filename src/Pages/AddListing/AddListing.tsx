@@ -8,7 +8,7 @@ import ListingRadioButtons from "./ListingRadioButtons/ListingRadioButtons";
 
 import "./AddListing.scss";
 
-export const AddListing = () => {
+const AddListing = () => {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
@@ -40,3 +40,5 @@ export const AddListing = () => {
     </Container>
   );
 };
+
+export default AddListing;
