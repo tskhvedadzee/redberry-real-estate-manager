@@ -36,9 +36,8 @@
   }
   &__image-item {
     position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 90px;
+    width: 90px;
   }
   &__uploaded-image {
     width: 100%;
@@ -52,5 +51,20 @@
     width: 20px;
     height: 20px;
     color: $gray-3;
+  }
+
+  &__remove-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -4px;
+    right: -4px;
+    background: $white;
+    border: 1px solid $black-2;
+    cursor: pointer;
+    color: $black-2;
+    padding: 5px;
+    border-radius: 50%;
   }
 }

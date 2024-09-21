@@ -1,8 +1,9 @@
 import React from "react";
 import ImageUploading, { ImageListType } from "react-images-uploading";
-import { CiCirclePlus } from "react-icons/ci";
+import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 
 import "./UploadImage.scss";
+import { BsTrash3 } from "react-icons/bs";
 
 export function UploadImage() {
   const [images, setImages] = React.useState([]);
@@ -13,6 +14,10 @@ export function UploadImage() {
   ) => {
     console.log(imageList, addUpdateIndex);
     setImages(imageList as never[]);
+  };
+  const handleRemoveImage = (index: number, event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent click from bubbling up
+    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
   };
 
   return (
@@ -44,6 +49,12 @@ export function UploadImage() {
                           alt=""
                           className="image-upload__uploaded-image"
                         />
+                        <button
+                          className="image-upload__remove-button"
+                          onClick={(event) => handleRemoveImage(index, event)}
+                        >
+                          <BsTrash3 />
+                        </button>
                       </div>
                     ))}
                   </>
