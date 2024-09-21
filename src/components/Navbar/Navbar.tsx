@@ -1,16 +1,24 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ActionButton from "../ActionButton/ActionButton";
 import { FiPlus } from "react-icons/fi";
+
+import AddAgentModal from "../AddAgentModal/AddAgentModal";
+import ActionButton from "../ActionButton/ActionButton";
 
 import "./Navbar.scss";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isModalVisible, setModalVisible] = useState(false);
 
   const handleAddListingClick = () => {
     navigate("/add-listing");
   };
-  
+
+  const handleAgentClick = () => {
+    setModalVisible(!isModalVisible);
+  };
+
   return (
     <div className="navbar">
       <div>dropdown</div>
@@ -25,10 +33,10 @@ const Navbar = () => {
         <ActionButton
           icon={<FiPlus />}
           text="აგენტის დამატება"
-          onClick={() => {
-            console.log("აგენტის დამატება clicked");
-          }}
+          onClick={handleAgentClick}
         />
+
+        <AddAgentModal isVisible={isModalVisible} onClick={handleAgentClick} />
       </div>
     </div>
   );
